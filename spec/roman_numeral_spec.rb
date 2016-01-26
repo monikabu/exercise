@@ -19,7 +19,7 @@ describe RomanNumeral do
 
       context 'Number is 0' do
         it 'returns a warning message' do
-          expect { described_class.roman_representation_of(-3) }.
+          expect { described_class.roman_representation_of(0) }.
             to raise_error(ArgumentError, /must be a positive integer/)
         end
       end
