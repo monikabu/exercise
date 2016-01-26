@@ -35,6 +35,6 @@ class RomanNumeral
   end
 
   def self.partial_roman_numeral(value, ratio)
-    partial_representation = ROMAN_NUMERALS[value] * ratio
+    ROMAN_NUMERALS[value] * ratio
   end
 end
