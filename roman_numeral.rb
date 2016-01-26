@@ -16,7 +16,7 @@ class RomanNumeral
   }.freeze
 
   def self.roman_representation_of(number)
-    valid_number?(number)
+    raise_exception_if_invalid_number(number)
 
     roman_numeral = ""
     ROMAN_NUMERALS.keys.each do |value|
@@ -28,7 +28,7 @@ class RomanNumeral
     roman_numeral
   end
 
-  def self.valid_number?(number)
+  def self.raise_exception_if_invalid_number(number)
     return if number.is_a?(Fixnum) && number > 0 && number < 10_000
     error_message = 'Argument must be a positive integer lower than 10 000'
     raise ArgumentError, error_message
